@@ -50,7 +50,16 @@
   <a href="#" data-soon data-i18n="terms"></a><a href="#" data-soon data-i18n="social"></a><a href="#" data-soon data-i18n="register"></a>
  </div>
 </footer>
-<dialog id="modal"><div class="m-head" id="mHead"></div><div class="m-body"><h3 id="mTitle"></h3><p class="loc" id="mLoc"></p><p id="mText"></p><button class="btn" id="mClose" data-i18n="close"></button></div></dialog>
+<dialog id="modal"><div class="m-head" id="mHead"></div><div class="m-body"><h3 id="mTitle"></h3><p class="loc" id="mLoc"></p><p id="mText"></p><p class="meta" id="mCredit"></p>
+<form id="bookForm" hidden>
+ <input id="fName" required minlength="2" maxlength="60" data-i18n-ph="fName">
+ <input id="fDate" type="date" required aria-label="date">
+ <input id="fPeople" type="number" min="1" max="100" value="2" required aria-label="people">
+ <textarea id="fNotes" rows="2" maxlength="300" data-i18n-ph="fNotes"></textarea>
+ <button class="btn" type="submit" data-i18n="fSend"></button>
+ <small class="meta" data-i18n="fNote"></small>
+</form>
+<button class="btn out" id="mClose" data-i18n="close"></button></div></dialog>
 <div class="toast" id="toast" role="status"></div>
 <script src="data.js"></script>
 <script src="script.js"></script>

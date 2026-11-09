@@ -1,4 +1,7 @@
 // DATA terpisah dari tampilan. Nanti mudah diganti dengan Supabase/Firebase.
+// Nomor WhatsApp penerima booking (format internasional tanpa + atau spasi)
+const CONFIG = {wa:"6285337591753"};
+const COMMONS = f => "https://commons.wikimedia.org/wiki/Special:FilePath/"+f+"?width=900";
 const T = (en, id) => ({ en, id });
 const UI = {
  en:{home:"Home",explore:"Explore",hotels:"Hotels",restaurants:"Restaurants",transport:"Transportation",services:"Local Services",about:"About Us",login:"Login",
@@ -8,7 +11,7 @@ const UI = {
  featured:"Featured Local Businesses",featuredSub:"Sample listings. All data is DEMO.",from:"From",viewDetails:"View Details",whatsapp:"WhatsApp",
  noResult:"No business matches your search. Try another keyword or category.",reset:"Reset filter",info:"Travel Information",infoSub:"Short guides to plan your trip.",
  read:"Read",close:"Close",demo:"DEMO",footAbout:"Your guide to explore Labuan Bajo.",contact:"Contact",privacy:"Privacy Policy",terms:"Terms and Conditions",social:"Social Media",register:"Register Your Business",
- soon:"This feature is built in a later stage (DEMO prototype).",noWa:"WhatsApp number is not set (DEMO data).",results:"results"},
+ soon:"This feature is built in a later stage (DEMO prototype).",noWa:"WhatsApp number is not set (DEMO data).",results:"results",bookNow:"Book via WhatsApp",fName:"Your name",fDate:"Service date",fPeople:"Number of people",fNotes:"Notes (optional)",fSend:"Send request to WhatsApp",fNote:"This opens WhatsApp with your request. It is not confirmed until the provider replies.",fRef:"Ref",fHi:"Hello, I would like to request a booking",fPhoto:"Photo",},
  id:{home:"Beranda",explore:"Jelajahi",hotels:"Hotel",restaurants:"Restoran",transport:"Transportasi",services:"Layanan Lokal",about:"Tentang Kami",login:"Masuk",
  heroTitle:"Temukan Keindahan Labuan Bajo",heroSub:"Panduan lengkap untuk menjelajah, merasakan, dan menikmati Labuan Bajo.",
  searchPh:"Cari bisnis, mis. kapal, hotel, pemandu",allCat:"Semua kategori",exploreNow:"Mulai Jelajahi",search:"Cari",
@@ -16,7 +19,7 @@ const UI = {
  featured:"Bisnis Lokal Unggulan",featuredSub:"Contoh listing. Semua data adalah DEMO.",from:"Mulai",viewDetails:"Lihat Detail",whatsapp:"WhatsApp",
  noResult:"Tidak ada bisnis yang cocok. Coba kata kunci atau kategori lain.",reset:"Reset filter",info:"Informasi Wisata",infoSub:"Panduan singkat untuk merencanakan perjalanan.",
  read:"Baca",close:"Tutup",demo:"DEMO",footAbout:"Panduan Anda menjelajah Labuan Bajo.",contact:"Kontak",privacy:"Kebijakan Privasi",terms:"Syarat dan Ketentuan",social:"Media Sosial",register:"Daftarkan Bisnis Anda",
- soon:"Fitur ini dibuat di tahap berikutnya (prototipe DEMO).",noWa:"Nomor WhatsApp belum diisi (data DEMO).",results:"hasil"}
+ soon:"Fitur ini dibuat di tahap berikutnya (prototipe DEMO).",noWa:"Nomor WhatsApp belum diisi (data DEMO).",results:"hasil",bookNow:"Pesan via WhatsApp",fName:"Nama Anda",fDate:"Tanggal layanan",fPeople:"Jumlah orang",fNotes:"Catatan (opsional)",fSend:"Kirim permintaan ke WhatsApp",fNote:"Ini membuka WhatsApp berisi permintaan Anda. Belum terkonfirmasi sampai penyedia membalas.",fRef:"Ref",fHi:"Halo, saya ingin mengajukan pemesanan",fPhoto:"Foto",}
 };
 const CATEGORIES = [
  {id:"hotel",icon:"🏨",name:T("Hotels & Accommodation","Hotel & Penginapan")},
@@ -31,8 +34,8 @@ const CATEGORIES = [
  {id:"guide",icon:"🎒",name:T("Tour Guides","Pemandu Wisata")}
 ];
 const DESTINATIONS = [
- {id:"padar",icon:"⛰️",c:["#0b3d5c","#16a5b0"],name:"Pulau Padar",loc:T("Komodo National Park","Taman Nasional Komodo"),desc:T("Famous three-bay viewpoint reached by a short hillside trek.","Titik pandang tiga teluk yang terkenal, dicapai dengan trekking singkat.")},
- {id:"komodo",icon:"🦎",c:["#17445f","#7fb89a"],name:"Pulau Komodo",loc:T("Komodo National Park","Taman Nasional Komodo"),desc:T("Home of the Komodo dragon. Visit with a licensed ranger.","Rumah komodo. Kunjungi bersama ranger resmi.")},
+ {id:"padar",remote:COMMONS("Pulau_Padar_1.jpg"),credit:"Wikimedia Commons (cek lisensi di halaman file)",icon:"⛰️",c:["#0b3d5c","#16a5b0"],name:"Pulau Padar",loc:T("Komodo National Park","Taman Nasional Komodo"),desc:T("Famous three-bay viewpoint reached by a short hillside trek.","Titik pandang tiga teluk yang terkenal, dicapai dengan trekking singkat.")},
+ {id:"komodo",remote:COMMONS("Komodo_island_(17119309071).jpg"),credit:"Wikimedia Commons (cek lisensi di halaman file)",icon:"🦎",c:["#17445f","#7fb89a"],name:"Pulau Komodo",loc:T("Komodo National Park","Taman Nasional Komodo"),desc:T("Home of the Komodo dragon. Visit with a licensed ranger.","Rumah komodo. Kunjungi bersama ranger resmi.")},
  {id:"pink",icon:"🏖️",c:["#c2557a","#f1b6c6"],name:"Pink Beach",loc:T("Komodo National Park","Taman Nasional Komodo"),desc:T("Pink-tinted sand and clear water for snorkeling.","Pasir berwarna merah muda dan air jernih untuk snorkeling.")},
  {id:"kelor",icon:"🏝️",c:["#0e7c86","#8fe0d4"],name:"Pulau Kelor",loc:T("Near Labuan Bajo","Dekat Labuan Bajo"),desc:T("Small island with a quick hike and sunrise views.","Pulau kecil dengan pendakian singkat dan pemandangan matahari terbit.")},
  {id:"batu",icon:"🕳️",c:["#4a3f35","#c9a66b"],name:"Goa Batu Cermin",loc:T("Labuan Bajo town","Kota Labuan Bajo"),desc:T("Limestone cave where light reflects off the walls.","Gua batu kapur tempat cahaya memantul di dinding.")},

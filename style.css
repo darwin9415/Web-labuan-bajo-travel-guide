@@ -43,3 +43,8 @@ dialog::backdrop{background:#0b3d5c99}
  .nav nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:flex-start;background:#fff;padding:16px 5%;box-shadow:var(--sh)}
  .nav nav.open{display:flex}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+
+.thumb img,.m-head img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.m-head{position:relative;overflow:hidden}.tag{z-index:1}
+#bookForm{display:grid;gap:8px}#bookForm[hidden]{display:none}
+#bookForm input,#bookForm textarea{border:1px solid #d5dde1;border-radius:12px;padding:10px;font:inherit;width:100%}
