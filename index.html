@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BAJO TRAVEL GUIDE – Labuan Bajo</title>
+<meta name="description" content="Guide, local business directory, and tourism services in Labuan Bajo, Flores.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav" id="nav">
+ <a class="logo" href="#top">⚓ BAJO TRAVEL GUIDE</a>
+ <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">☰</button>
+ <nav id="menu">
+  <a href="#top" data-i18n="home"></a>
+  <a href="#destinations" data-i18n="explore"></a>
+  <a href="#businesses" data-cat="hotel" data-i18n="hotels"></a>
+  <a href="#businesses" data-cat="resto" data-i18n="restaurants"></a>
+  <a href="#businesses" data-cat="car" data-i18n="transport"></a>
+  <a href="#services" data-i18n="services"></a>
+  <a href="#about" data-i18n="about"></a>
+  <button class="lang" id="lang" aria-label="Language">ID</button>
+  <button class="btn sm" id="login" data-i18n="login"></button>
+ </nav>
+</header>
+<main id="top">
+<section class="hero">
+ <div class="hero-in">
+  <h1 data-i18n="heroTitle"></h1>
+  <p data-i18n="heroSub"></p>
+  <form class="search" id="searchForm">
+   <input id="q" type="search" data-i18n-ph="searchPh" aria-label="Search">
+   <select id="cat" aria-label="Category"></select>
+   <button class="btn" type="submit" data-i18n="search"></button>
+  </form>
+  <a class="btn light" href="#destinations" data-i18n="exploreNow"></a>
+ </div>
+</section>
+<section class="sec" id="destinations"><h2 data-i18n="popular"></h2><p class="sub" data-i18n="popularSub"></p><div class="grid" id="destGrid"></div></section>
+<section class="sec sand" id="services"><h2 data-i18n="findSvc"></h2><p class="sub" data-i18n="findSvcSub"></p><div class="chips" id="catGrid"></div></section>
+<section class="sec" id="businesses"><h2 data-i18n="featured"></h2><p class="sub"><span data-i18n="featuredSub"></span> <b id="count"></b></p><div class="grid" id="bizGrid"></div></section>
+<section class="sec sand" id="about"><h2 data-i18n="info"></h2><p class="sub" data-i18n="infoSub"></p><div class="grid" id="artGrid"></div></section>
+</main>
+<footer class="foot">
+ <div><b>⚓ BAJO TRAVEL GUIDE</b><p data-i18n="footAbout"></p></div>
+ <div class="links">
+  <a href="#about" data-i18n="about"></a><a href="#" data-soon data-i18n="contact"></a><a href="#" data-soon data-i18n="privacy"></a>
+  <a href="#" data-soon data-i18n="terms"></a><a href="#" data-soon data-i18n="social"></a><a href="#" data-soon data-i18n="register"></a>
+ </div>
+</footer>
+<dialog id="modal"><div class="m-head" id="mHead"></div><div class="m-body"><h3 id="mTitle"></h3><p class="loc" id="mLoc"></p><p id="mText"></p><button class="btn" id="mClose" data-i18n="close"></button></div></dialog>
+<div class="toast" id="toast" role="status"></div>
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
