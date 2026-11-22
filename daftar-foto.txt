@@ -1,0 +1,41 @@
+FOTO YANG DIBUTUHKAN (JPG, lebar min. 1200 px, simpan di folder assets/img/)
+
+assets/img/hotel/plataran-komodo-resort-and-spa.jpg   <- Plataran Komodo Resort & Spa
+assets/img/hotel/ayana-komodo-waecicu-beach.jpg   <- AYANA Komodo Waecicu Beach
+assets/img/hotel/meruorah-komodo-labuan-bajo.jpg   <- Meruorah Komodo Labuan Bajo
+assets/img/hotel/sudamala-resort-komodo.jpg   <- Sudamala Resort, Komodo
+assets/img/hotel/loccal-collection-hotel-komodo.jpg   <- Loccal Collection Hotel Komodo
+assets/img/hotel/katamaran-hotel-and-resort-komodo.jpg   <- Katamaran Hotel & Resort Komodo
+assets/img/hotel/bajosylvia-hotel-and-resort-komodo.jpg   <- BajoSylvia Hotel & Resort Komodo
+assets/img/hotel/69-resort-and-beach-club-by-loccal-collection.jpg   <- 69 Resort & Beach Club by Loccal Collection
+assets/img/resto/baccala.jpg   <- Baccalá
+assets/img/resto/happy-banana-komodo.jpg   <- Happy Banana Komodo
+assets/img/resto/copper-bonnet-bistro-and-bar.jpg   <- Copper Bonnet Bistro & Bar
+assets/img/resto/la-cucina.jpg   <- La Cucina
+assets/img/resto/artomoro-restaurant-and-grill.jpg   <- Artomoro Restaurant & Grill
+assets/img/resto/made-in-italy-ristorante-italiano.jpg   <- Made in Italy Ristorante Italiano
+assets/img/resto/green-cherry-eco-tree-otel.jpg   <- Green Cherry (Eco Tree Otel)
+assets/img/resto/unique-rooftop-bar.jpg   <- UNIQUE Rooftop Bar
+assets/img/resto/seafood-night-market.jpg   <- Seafood Night Market
+assets/img/resto/garuda-padang.jpg   <- Garuda Padang
+assets/img/car/komodo-airport-lbj.jpg   <- Komodo Airport (LBJ)
+assets/img/car/airport-taxi.jpg   <- Airport taxi
+assets/img/car/blue-bird-taxi.jpg   <- Blue Bird Taxi
+assets/img/car/private-airport-transfer.jpg   <- Private airport transfer
+assets/img/car/ojek-and-ride-hailing.jpg   <- Ojek and ride-hailing
+assets/img/car/port-and-ferries.jpg   <- Port and ferries
+assets/img/dive/wicked-diving.jpg   <- Wicked Diving
+assets/img/dive/blue-marlin-dive.jpg   <- Blue Marlin Dive
+assets/img/dive/uber-scuba.jpg   <- Uber Scuba
+assets/img/dive/dragon-dive-komodo.jpg   <- Dragon Dive Komodo
+assets/img/dive/twin-island-dive-komodo.jpg   <- Twin Island Dive Komodo
+assets/img/dive/somer-dive-center-komodo.jpg   <- Somer Dive Center Komodo
+assets/img/dive/komodo-liveaboards.jpg   <- Komodo liveaboards
+
+assets/img/padar.jpg   <- Padar Island
+assets/img/komodo.jpg   <- Komodo Island
+assets/img/pink-beach.jpg   <- Pink Beach
+assets/img/kelor.jpg   <- Kelor Island
+assets/img/batu-cermin.jpg   <- Batu Cermin Cave
+assets/img/wae-rebo.jpg   <- Wae Rebo
+assets/img/bukit-sylvia.jpg   <- Sylvia Hill
