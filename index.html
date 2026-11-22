@@ -3,65 +3,197 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>BAJO TRAVEL GUIDE – Labuan Bajo</title>
-<meta name="description" content="Guide, local business directory, and tourism services in Labuan Bajo, Flores.">
+<title>BAJO TRAVEL GUIDE – Labuan Bajo, Flores</title>
+<meta name="description" content="Hotels, restaurants, transport, diving and tours in Labuan Bajo, gateway to Komodo National Park.">
+<meta name="theme-color" content="#0b3c5d">
+<meta property="og:title" content="BAJO TRAVEL GUIDE – Labuan Bajo">
+<meta property="og:description" content="Where the dragons meet the sea: hotels, food, transport and tours in Labuan Bajo.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E⚓%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<style>
+:root{--ocean:#0b3c5d;--deep:#072a43;--teal:#1fb6c1;--sand:#f3e9d8;--ink:#12293a;--mut:#5a6f7e;--wh:#fff;--r:14px}
+*{box-sizing:border-box;margin:0}html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font:16px/1.6 'Plus Jakarta Sans',system-ui,sans-serif;color:var(--ink);background:#fff}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.15}
+a{color:inherit}:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+.nav{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 5vw;background:rgba(7,42,67,.94);backdrop-filter:blur(8px);color:#fff}
+.logo{font:700 18px Fraunces,serif;text-decoration:none;letter-spacing:.3px}
+nav{display:flex;align-items:center;gap:20px}nav a{text-decoration:none;font-size:14px;font-weight:500;opacity:.85}nav a:hover{opacity:1;color:var(--teal)}
+.burger{display:none;background:none;border:0;color:#fff;font-size:26px;cursor:pointer}
+.btn{background:var(--teal);color:var(--deep);border:0;padding:12px 22px;border-radius:999px;font:700 15px inherit;font-family:inherit;cursor:pointer;text-decoration:none;display:inline-block}
+.btn:hover{filter:brightness(1.08)}.btn.sm{padding:8px 16px;font-size:13px}.btn.light{background:#fff}.btn.out{background:none;border:2px solid var(--ocean);color:var(--ocean)}
+.lang{background:none;border:1px solid rgba(255,255,255,.5);color:#fff;border-radius:8px;padding:5px 10px;cursor:pointer;font-weight:700}
+.hero{position:relative;min-height:88vh;display:grid;align-items:center;padding:60px 5vw 120px;color:#fff;overflow:hidden;background:radial-gradient(circle at 78% 22%,#ffd89a 0 7%,transparent 7.2%),linear-gradient(180deg,#0b3c5d 0%,#127a99 55%,#1fb6c1 100%)}
+.hero svg{position:absolute;left:0;bottom:-1px;width:100%;height:30%}
+.hero-in{position:relative;max-width:820px}
+.hero h1{font-size:clamp(40px,7.4vw,86px);letter-spacing:-1.5px;margin-bottom:18px}
+.hero p{font-size:clamp(16px,2vw,20px);max-width:560px;opacity:.92;margin-bottom:28px}
+.search{display:flex;flex-wrap:wrap;gap:8px;background:#fff;padding:8px;border-radius:20px;max-width:680px;margin-bottom:18px}
+.search input,.search select{flex:1 1 160px;border:0;padding:12px 14px;font:inherit;border-radius:12px;background:#f5f8fa;color:var(--ink)}
+.sec{padding:84px 5vw}.sand{background:var(--sand)}
+.sec h2{font-size:clamp(28px,4vw,44px);color:var(--ocean);margin-bottom:8px}.sub{color:var(--mut);max-width:620px;margin-bottom:34px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:22px}
+.card{background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:0 2px 18px rgba(11,60,93,.1);display:flex;flex-direction:column;cursor:pointer;border:0;text-align:left;font:inherit;color:inherit;padding:0}
+.card:hover{box-shadow:0 8px 28px rgba(11,60,93,.18)}
+.ph{height:170px;display:grid;place-items:center;font-size:54px;background:var(--g,linear-gradient(135deg,#0b3c5d,#1fb6c1));position:relative}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.rate{position:absolute;top:10px;right:10px;background:#fff;color:var(--ocean);font:700 13px 'Plus Jakarta Sans';padding:3px 10px;border-radius:999px}
+.cb{padding:16px 18px 20px;display:flex;flex-direction:column;gap:4px;flex:1}.cb h3{font-size:19px;color:var(--ocean)}.cb small{color:var(--teal);font-weight:700}.cb p{color:var(--mut);font-size:14px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px}
+.chip{border:2px solid var(--ocean);background:none;color:var(--ocean);padding:9px 20px;border-radius:999px;font:700 14px inherit;font-family:inherit;cursor:pointer}
+.chip[aria-pressed=true]{background:var(--ocean);color:#fff}
+.info .card{cursor:default;padding:24px}.info h3{margin-bottom:8px;color:var(--ocean);font-size:20px}
+.note{margin-top:26px;font-size:13px;color:var(--mut);max-width:760px}
+.foot{background:var(--deep);color:#cfe3ee;padding:48px 5vw;display:flex;flex-wrap:wrap;gap:30px;justify-content:space-between}
+.foot b{color:#fff;font:700 18px Fraunces}.foot p{max-width:380px;font-size:14px;margin-top:8px}
+.links{display:flex;flex-wrap:wrap;gap:8px 22px;align-content:flex-start;font-size:14px}.links a{text-decoration:none}.links a:hover{color:var(--teal)}
+dialog{border:0;border-radius:18px;padding:0;width:min(520px,94vw);max-height:92vh;overflow:auto}dialog::backdrop{background:rgba(7,42,67,.6)}
+.m-head{height:130px;display:grid;place-items:center;font-size:56px;background:linear-gradient(135deg,#0b3c5d,#1fb6c1)}
+.m-body{padding:22px}.m-body h3{font-size:26px;color:var(--ocean)}.loc{color:var(--teal);font-weight:700;margin:2px 0 10px}.meta{font-size:12px;color:var(--mut);display:block;margin:8px 0}
+form{display:grid;gap:10px;margin:14px 0}form input,form textarea{padding:11px 13px;border:1.5px solid #cfdbe3;border-radius:10px;font:inherit;width:100%}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,120px);background:var(--deep);color:#fff;padding:12px 20px;border-radius:12px;transition:.3s;z-index:50;max-width:90vw}.toast.on{transform:translate(-50%,0)}
+@media(max-width:860px){.burger{display:block}nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--deep);flex-direction:column;align-items:flex-start;padding:18px 5vw}nav.open{display:flex}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
 </head>
 <body>
-<header class="nav" id="nav">
+<header class="nav">
  <a class="logo" href="#top">⚓ BAJO TRAVEL GUIDE</a>
- <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">☰</button>
+ <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu">☰</button>
  <nav id="menu">
-  <a href="#top" data-i18n="home"></a>
-  <a href="#destinations" data-i18n="explore"></a>
-  <a href="#businesses" data-cat="hotel" data-i18n="hotels"></a>
-  <a href="#businesses" data-cat="resto" data-i18n="restaurants"></a>
-  <a href="#businesses" data-cat="car" data-i18n="transport"></a>
-  <a href="#services" data-i18n="services"></a>
-  <a href="#about" data-i18n="about"></a>
+  <a href="#top" data-i="home"></a>
+  <a href="#destinations" data-i="explore"></a>
+  <a href="#businesses" data-cat="hotel" data-i="hotels"></a>
+  <a href="#businesses" data-cat="resto" data-i="restaurants"></a>
+  <a href="#businesses" data-cat="car" data-i="transport"></a>
+  <a href="#businesses" data-cat="dive" data-i="services"></a>
+  <a href="#about" data-i="about"></a>
   <button class="lang" id="lang" aria-label="Language">ID</button>
-  <button class="btn sm" id="login" data-i18n="login"></button>
+  <button class="btn sm" id="login" data-i="login"></button>
  </nav>
 </header>
 <main id="top">
 <section class="hero">
  <div class="hero-in">
-  <h1 data-i18n="heroTitle"></h1>
-  <p data-i18n="heroSub"></p>
+  <h1 data-i="heroT"></h1><p data-i="heroS"></p>
   <form class="search" id="searchForm">
-   <input id="q" type="search" data-i18n-ph="searchPh" aria-label="Search">
-   <select id="cat" aria-label="Category"></select>
-   <button class="btn" type="submit" data-i18n="search"></button>
+   <input id="q" type="search" data-ph="ph" aria-label="Search"><select id="cat" aria-label="Category"></select>
+   <button class="btn" type="submit" data-i="search"></button>
   </form>
-  <a class="btn light" href="#destinations" data-i18n="exploreNow"></a>
+  <a class="btn light" href="#destinations" data-i="exploreNow"></a>
  </div>
+ <svg viewBox="0 0 1440 200" preserveAspectRatio="none" aria-hidden="true"><path fill="#f3e9d8" fill-opacity=".35" d="M0 90c180-60 300 40 480 0s300-70 480-10 300 40 480-20v140H0z"/><path fill="#fff" d="M0 140c200-50 340 30 520-5s320-50 500 0 280 20 420-25v90H0z"/></svg>
 </section>
-<section class="sec" id="destinations"><h2 data-i18n="popular"></h2><p class="sub" data-i18n="popularSub"></p><div class="grid" id="destGrid"></div></section>
-<section class="sec sand" id="services"><h2 data-i18n="findSvc"></h2><p class="sub" data-i18n="findSvcSub"></p><div class="chips" id="catGrid"></div></section>
-<section class="sec" id="businesses"><h2 data-i18n="featured"></h2><p class="sub"><span data-i18n="featuredSub"></span> <b id="count"></b></p><div class="grid" id="bizGrid"></div></section>
-<section class="sec sand" id="about"><h2 data-i18n="info"></h2><p class="sub" data-i18n="infoSub"></p><div class="grid" id="artGrid"></div></section>
+<section class="sec" id="destinations"><h2 data-i="secDest"></h2><p class="sub" data-i="secDestS"></p><div class="grid" id="destGrid"></div></section>
+<section class="sec sand" id="businesses"><h2 data-i="secBiz"></h2><p class="sub"><span data-i="secBizS"></span> <b id="count"></b></p><div class="chips" id="chips"></div><div class="grid" id="bizGrid"></div><p class="note" data-i="disc"></p></section>
+<section class="sec info" id="about"><h2 data-i="secInfo"></h2><p class="sub" data-i="secInfoS"></p><div class="grid" id="infoGrid"></div></section>
 </main>
 <footer class="foot">
- <div><b>⚓ BAJO TRAVEL GUIDE</b><p data-i18n="footAbout"></p></div>
- <div class="links">
-  <a href="#about" data-i18n="about"></a><a href="#" data-soon data-i18n="contact"></a><a href="#" data-soon data-i18n="privacy"></a>
-  <a href="#" data-soon data-i18n="terms"></a><a href="#" data-soon data-i18n="social"></a><a href="#" data-soon data-i18n="register"></a>
- </div>
+ <div><b>⚓ BAJO TRAVEL GUIDE</b><p data-i="foot"></p></div>
+ <div class="links"><a href="#about" data-i="about"></a><a id="fContact" href="#" data-i="contact"></a><a href="#" data-pg="privacy" data-i="privacy"></a><a href="#" data-pg="terms" data-i="terms"></a></div>
 </footer>
-<dialog id="modal"><div class="m-head" id="mHead"></div><div class="m-body"><h3 id="mTitle"></h3><p class="loc" id="mLoc"></p><p id="mText"></p><p class="meta" id="mCredit"></p>
+<dialog id="modal"><div class="m-head" id="mHead"></div><div class="m-body"><h3 id="mTitle"></h3><p class="loc" id="mLoc"></p><p id="mText"></p><span class="meta" id="mMeta"></span>
 <form id="bookForm" hidden>
- <input id="fName" required minlength="2" maxlength="60" data-i18n-ph="fName">
- <input id="fDate" type="date" required aria-label="date">
- <input id="fPeople" type="number" min="1" max="100" value="2" required aria-label="people">
- <textarea id="fNotes" rows="2" maxlength="300" data-i18n-ph="fNotes"></textarea>
- <button class="btn" type="submit" data-i18n="fSend"></button>
- <small class="meta" data-i18n="fNote"></small>
+ <input id="fName" required minlength="2" maxlength="60" data-ph="fName" aria-label="Name">
+ <input id="fDate" type="date" required aria-label="Date">
+ <input id="fPeople" type="number" min="1" max="100" value="2" required aria-label="People">
+ <textarea id="fNotes" rows="2" maxlength="300" data-ph="fNotes" aria-label="Notes"></textarea>
+ <button class="btn" type="submit" data-i="fSend"></button><small class="meta" data-i="fNote"></small>
 </form>
-<button class="btn out" id="mClose" data-i18n="close"></button></div></dialog>
+<button class="btn out" id="mClose" data-i="close"></button></div></dialog>
 <div class="toast" id="toast" role="status"></div>
-<script src="data.js"></script>
-<script src="script.js"></script>
+<script>
+const WA='6285337591753',$=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const T={en:{home:'Home',explore:'Explore',hotels:'Hotels',restaurants:'Restaurants',transport:'Transport',services:'Diving & Tours',about:'Info',login:'Login',heroT:'Where the dragons meet the sea',heroS:'Hotels, restaurants, transport and dive operators in Labuan Bajo, the gateway to Komodo National Park.',ph:'Hotel, restaurant, dive…',search:'Search',exploreNow:'Explore destinations',all:'All',secDest:'Places worth the boat ride',secDestS:'Seven landmarks around Labuan Bajo, from Padar’s three bays to Wae Rebo’s mountain village.',secBiz:'Stay, eat, get around, dive',secBizS:'Listings found:',secInfo:'Plan before you land',secInfoS:'Short answers to the questions first-time visitors ask.',disc:'Listings are compiled from public sources (Trip.com, Tiket.com, Wanderlog, Lonely Planet, Wikivoyage, PADI, 2026). Ratings come from those platforms and change over time. Confirm prices and availability with the provider.',foot:'Local guide and booking requests for Labuan Bajo, Flores.',contact:'Contact on WhatsApp',privacy:'Privacy',terms:'Terms',details:'Details',request:'Booking request',fName:'Your name',fNotes:'Notes (optional)',fSend:'Send request on WhatsApp',fNote:'This is a request, not a confirmed booking. The provider confirms availability and price.',close:'Close',none:'No listings match. Try another word or category.',soon:'Accounts open soon. For now, send booking requests on WhatsApp.',src:'Source',rating:'rating',hi:'Hello, I would like to request:',date:'Date',ppl:'People',nts:'Notes',pPriv:'This site stores nothing about you. When you send a request, your details go only to WhatsApp, where you can review the message before sending.',pTerms:'BAJO TRAVEL GUIDE is an information and request service. A request is not a confirmed booking until the provider confirms it. Details can change, so verify with the provider.',pastDate:'Choose today or a later date.',cats:{hotel:'Hotels',resto:'Restaurants',car:'Transport',dive:'Diving & Tours'}},
+id:{home:'Beranda',explore:'Jelajahi',hotels:'Hotel',restaurants:'Restoran',transport:'Transportasi',services:'Diving & Tur',about:'Info',login:'Masuk',heroT:'Tempat naga bertemu laut',heroS:'Hotel, restoran, transportasi, dan operator diving di Labuan Bajo, pintu gerbang Taman Nasional Komodo.',ph:'Hotel, restoran, diving…',search:'Cari',exploreNow:'Jelajahi destinasi',all:'Semua',secDest:'Tempat yang layak didatangi',secDestS:'Tujuh landmark di sekitar Labuan Bajo, dari tiga teluk Padar sampai desa gunung Wae Rebo.',secBiz:'Menginap, makan, bepergian, menyelam',secBizS:'Listing ditemukan:',secInfo:'Rencanakan sebelum tiba',secInfoS:'Jawaban singkat untuk pertanyaan pengunjung pertama kali.',disc:'Listing dikumpulkan dari sumber publik (Trip.com, Tiket.com, Wanderlog, Lonely Planet, Wikivoyage, PADI, 2026). Rating berasal dari platform tersebut dan dapat berubah. Pastikan harga dan ketersediaan langsung ke penyedia.',foot:'Panduan lokal dan permintaan booking untuk Labuan Bajo, Flores.',contact:'Hubungi via WhatsApp',privacy:'Privasi',terms:'Ketentuan',details:'Detail',request:'Permintaan booking',fName:'Nama Anda',fNotes:'Catatan (opsional)',fSend:'Kirim permintaan via WhatsApp',fNote:'Ini permintaan, bukan booking terkonfirmasi. Penyedia yang mengonfirmasi ketersediaan dan harga.',close:'Tutup',none:'Tidak ada listing yang cocok. Coba kata atau kategori lain.',soon:'Akun segera dibuka. Untuk saat ini, kirim permintaan booking lewat WhatsApp.',src:'Sumber',rating:'rating',hi:'Halo, saya ingin mengajukan permintaan:',date:'Tanggal',ppl:'Jumlah orang',nts:'Catatan',pPriv:'Situs ini tidak menyimpan data Anda. Saat Anda mengirim permintaan, data hanya diteruskan ke WhatsApp, tempat Anda bisa memeriksa pesan sebelum mengirim.',pTerms:'BAJO TRAVEL GUIDE adalah layanan informasi dan permintaan. Permintaan belum menjadi booking sampai dikonfirmasi penyedia. Detail dapat berubah, jadi verifikasi ke penyedia.',pastDate:'Pilih hari ini atau tanggal berikutnya.',cats:{hotel:'Hotel',resto:'Restoran',car:'Transportasi',dive:'Diving & Tur'}}};
+const IC={hotel:'🏨',resto:'🍽️',car:'🚐',dive:'🤿'},GR={hotel:'linear-gradient(135deg,#0b3c5d,#2a8fb0)',resto:'linear-gradient(135deg,#b4572a,#e8a15c)',car:'linear-gradient(135deg,#1c5a4e,#4fc1a6)',dive:'linear-gradient(135deg,#052a4a,#1fb6c1)'};
+const DEST=[
+['padar','Padar Island','Komodo National Park',['Famous three-bay viewpoint reached by a short, steep hike.','Titik pandang tiga teluk yang terkenal, dicapai dengan pendakian singkat dan curam.'],'🏝️'],
+['komodo','Komodo Island','Komodo National Park',['Home of the Komodo dragon inside a UNESCO-listed national park.','Habitat komodo di dalam taman nasional warisan UNESCO.'],'🦎'],
+['pink-beach','Pink Beach','Komodo National Park',['Pink-tinted sand with easy snorkeling over the reef.','Pasir berwarna merah muda dengan snorkeling mudah di atas terumbu.'],'🏖️'],
+['kelor','Kelor Island','Near Labuan Bajo',['Small island close to town with a quick hill walk and bay views.','Pulau kecil dekat kota dengan jalur bukit singkat dan pemandangan teluk.'],'⛰️'],
+['batu-cermin','Batu Cermin Cave','Labuan Bajo',['Limestone cave a few minutes from the town center.','Gua batu kapur beberapa menit dari pusat kota.'],'🕳️'],
+['wae-rebo','Wae Rebo','Manggarai highlands',['Traditional mountain village known for its cone-shaped houses.','Desa tradisional di pegunungan dengan rumah berbentuk kerucut.'],'🛖'],
+['bukit-sylvia','Sylvia Hill','Waecicu, Labuan Bajo',['Hilltop viewpoint over the bay, popular at sunset.','Bukit dengan pemandangan teluk, ramai saat matahari terbenam.'],'🌅']];
+const D=[
+['hotel','Plataran Komodo Resort & Spa','Waecicu Beach','9.5',['Island-style resort in a quiet cove with private beach access and villas.','Resor bergaya pulau di teluk tenang dengan akses pantai pribadi dan vila.'],'Trip.com'],
+['hotel','AYANA Komodo Waecicu Beach','Waecicu Beach','9.4',['Luxury beachfront resort with 3 restaurants, 4 bars, 2 pools and a spa.','Resor mewah tepi pantai dengan 3 restoran, 4 bar, 2 kolam renang, dan spa.'],'Trip.com'],
+['hotel','Meruorah Komodo Labuan Bajo','Marina, Jl. Soekarno Hatta','9.1',['About 1 minute from the port, with a rooftop bar and spa.','Sekitar 1 menit dari pelabuhan, dengan bar rooftop dan spa.'],'Trip.com, Tiket.com'],
+['hotel','Sudamala Resort, Komodo','Labuan Bajo','9.1',['Boutique resort with pool, beach bar and diving on site.','Resor butik dengan kolam renang, bar pantai, dan diving di lokasi.'],'Trip.com'],
+['hotel','Loccal Collection Hotel Komodo','Labuan Bajo','9.0',['Four-star hotel known for its cave views and central location.','Hotel bintang empat dengan pemandangan gua dan lokasi sentral.'],'Trip.com'],
+['hotel','Katamaran Hotel & Resort Komodo','Labuan Bajo','9.0',['Private beach area, two outdoor pools and an indoor pool.','Area pantai pribadi, dua kolam renang luar ruang, dan satu kolam dalam ruang.'],'Trip.com'],
+['hotel','BajoSylvia Hotel & Resort Komodo','Near the airport','',['Beachfront resort near the airport, with a 24-hour restaurant and snorkeling.','Resor tepi pantai dekat bandara, restoran 24 jam, dan snorkeling.'],'Trip.com'],
+['hotel','69 Resort & Beach Club by Loccal Collection','Labuan Bajo','',['Resort with beach club, pool and sunbathing area.','Resor dengan beach club, kolam renang, dan area berjemur.'],'Trip.com'],
+['resto','Baccalá','Labuan Bajo','4.8',['Italian cooking with an Asian twist: seafood, handmade pasta and pizza.','Masakan Italia dengan sentuhan Asia: seafood, pasta buatan sendiri, dan pizza.'],'Wanderlog'],
+['resto','Happy Banana Komodo','Labuan Bajo','4.7',['Japanese fusion known for sushi and ramen, with a full coffee bar.','Fusion Jepang yang terkenal dengan sushi dan ramen, plus coffee bar lengkap.'],'Wanderlog'],
+['resto','Copper Bonnet Bistro & Bar','Jl. Soekarno Hatta','4.6',['International, Mediterranean and European menu.','Menu internasional, Mediterania, dan Eropa.'],'Wanderlog'],
+['resto','La Cucina','Labuan Bajo','4.5',['Italian restaurant praised for pizza and fresh pasta; the owner is Italian.','Restoran Italia yang dipuji karena pizza dan pasta segar; pemiliknya orang Italia.'],'Wanderlog'],
+['resto','Artomoro Restaurant & Grill','Jl. Soekarno Hatta','4.3',['Budget-friendly seafood and Indonesian food with Flores-style sambal. Open 7 AM to 11 PM.','Seafood dan masakan Indonesia ramah kantong dengan sambal ala Flores. Buka 07.00–23.00.'],'Wanderlog, Tiket.com'],
+['resto','Made in Italy Ristorante Italiano','Jl. Soekarno Hatta','',['Thin-crust pizza and fresh pasta; ingredients imported from Italy.','Pizza tipis dan pasta segar; bahan diimpor dari Italia.'],'Lonely Planet'],
+['resto','Green Cherry (Eco Tree Otel)','Jl. Soekarno Hatta','',['Asian and Mediterranean dishes, with vegetarian options.','Hidangan Asia dan Mediterania, tersedia pilihan vegetarian.'],'Wanderlog'],
+['resto','UNIQUE Rooftop Bar','Labuan Bajo','',['Seafood platters with a sunset view over the harbor.','Hidangan seafood dengan pemandangan matahari terbenam di atas pelabuhan.'],'Tiket.com'],
+['resto','Seafood Night Market','Waterfront, Labuan Bajo','',['Waterfront stalls with fresh seafood on display; atmospheric for dinner, not the cheapest.','Warung tepi laut dengan seafood segar; suasana dinner terbaik, tapi tidak murah.'],'Lonely Planet'],
+['resto','Garuda Padang','Southern Jl. Soekarno Hatta','',['Padang-style point-and-order rice meals, a local budget pick.','Nasi Padang pilih sendiri dari etalase, pilihan hemat khas lokal.'],'Lonely Planet'],
+['car','Komodo Airport (LBJ)','About 2 km from the center','',['Flights from Bali, plus direct flights from Jakarta with Garuda Indonesia.','Penerbangan dari Bali, serta penerbangan langsung dari Jakarta dengan Garuda Indonesia.'],'Wikivoyage'],
+['car','Airport taxi','Outside arrivals','',['About 10 minutes to town. Typical fare IDR 50,000 to 250,000 depending on where you stay.','Sekitar 10 menit ke kota. Tarif umum Rp50.000–Rp250.000 tergantung lokasi menginap.'],'Jetstar'],
+['car','Blue Bird Taxi','Airport and town','',['Metered taxi; one traveler guide reports about Rp28,000 to 35,000 into town.','Taksi argo; satu panduan traveler menyebut sekitar Rp28.000–35.000 ke kota.'],'SoloGuides'],
+['car','Private airport transfer','Komodo Airport','',['Pre-booked transfers are sold through Trip.com, KKday and Ceneast Transport, running 24/7.','Transfer pesan di muka dijual lewat Trip.com, KKday, dan Ceneast Transport, beroperasi 24/7.'],'Trip.com, KKday, Expedia'],
+['car','Ojek and ride-hailing','Town','',['Motorbike taxis are common. Grab and Gojek can be spotty outside the airport.','Ojek mudah ditemukan. Grab dan Gojek kadang tidak stabil di luar area bandara.'],'SoloGuides'],
+['car','Port and ferries','Labuan Bajo Port','',['Daily ferry to Bima, Sumbawa; the town is walkable around the port.','Kapal feri harian ke Bima, Sumbawa; area sekitar pelabuhan bisa ditempuh dengan jalan kaki.'],'Wikivoyage'],
+['dive','Wicked Diving','Labuan Bajo','',['Dive shop with daily departures, named among reliable operators.','Toko diving dengan keberangkatan harian, disebut sebagai operator andal.'],'SoloGuides'],
+['dive','Blue Marlin Dive','Labuan Bajo','',['Dive shop offering fun dives and courses.','Toko diving dengan fun dive dan kursus.'],'SoloGuides'],
+['dive','Uber Scuba','Labuan Bajo','',['Dive shop with group-friendly trips and rental gear.','Toko diving dengan trip ramah grup dan sewa perlengkapan.'],'SoloGuides'],
+['dive','Dragon Dive Komodo','Labuan Bajo','',['PADI dive center contributing to PADI’s Komodo guide.','Pusat diving PADI yang berkontribusi pada panduan Komodo PADI.'],'PADI'],
+['dive','Twin Island Dive Komodo','Labuan Bajo','',['PADI-listed dive operator for Komodo National Park.','Operator diving terdaftar PADI untuk Taman Nasional Komodo.'],'PADI'],
+['dive','Somer Dive Center Komodo','Labuan Bajo','',['Dive center near Meruorah and Loccal hotels.','Pusat diving dekat hotel Meruorah dan Loccal.'],'Trip.com'],
+['dive','Komodo liveaboards','Departs Labuan Bajo','',['3 to 4 day trips cover sites like Batu Bolong and Manta Point, about an hour from town.','Trip 3–4 hari mencakup lokasi seperti Batu Bolong dan Manta Point, sekitar satu jam dari kota.'],'Liveaboard.com']
+].map((a,i)=>({id:i,c:a[0],n:a[1],a:a[2],r:a[3],d:a[4],s:a[5]}));
+const INFO=[
+['✈️',['Getting there','Cara ke sini'],['Komodo Airport (LBJ) is about 2 km from the center. Daily flights come from Bali and Jakarta, and a ferry runs to Bima.','Bandara Komodo (LBJ) sekitar 2 km dari pusat kota. Ada penerbangan harian dari Bali dan Jakarta, dan feri ke Bima.']],
+['🚕',['Getting around','Berkeliling'],['Town is walkable. Use taxis or ojek for the airport and hotels along Waecicu Beach.','Kota bisa dijelajahi dengan jalan kaki. Gunakan taksi atau ojek ke bandara dan hotel di Pantai Waecicu.']],
+['🎉',['Events','Acara'],['Labuan Bajo Maritime Festival in July. Flores Marathon and Tado Traditional Boat Race in September.','Festival Maritim Labuan Bajo bulan Juli. Flores Marathon dan Lomba Perahu Tradisional Tado bulan September.']],
+['🐠',['Diving','Menyelam'],['Batu Bolong and Manta Point are known for strong currents and big marine life. Choose an operator before you pick a hotel.','Batu Bolong dan Manta Point dikenal berarus kuat dan satwa laut besar. Pilih operator diving sebelum memilih hotel.']]];
+let L='en',cat='all',q='';const t=k=>T[L][k];
+function img(n){return `<img src="assets/img/${n}.jpg" alt="" loading="lazy" onerror="this.remove()">`}
+function render(){
+ document.documentElement.lang=L;$('#lang').textContent=L==='en'?'ID':'EN';
+ $$('[data-i]').forEach(e=>e.textContent=t(e.dataset.i));$$('[data-ph]').forEach(e=>e.placeholder=t(e.dataset.ph));
+ $('#cat').innerHTML=['all','hotel','resto','car','dive'].map(c=>`<option value="${c}"${c===cat?' selected':''}>${c==='all'?t('all'):t('cats')[c]}</option>`).join('');
+ $('#chips').innerHTML=['all','hotel','resto','car','dive'].map(c=>`<button class="chip" data-c="${c}" aria-pressed="${c===cat}">${c==='all'?t('all'):t('cats')[c]}</button>`).join('');
+ $('#destGrid').innerHTML=DEST.map((d,i)=>`<button class="card" data-d="${i}"><div class="ph" style="--g:linear-gradient(135deg,#0b3c5d,#1fb6c1)">${d[4]}${img(d[0])}</div><div class="cb"><small>${d[2]}</small><h3>${d[1]}</h3><p>${d[3][L==='en'?0:1]}</p></div></button>`).join('');
+ const list=D.filter(x=>(cat==='all'||x.c===cat)&&(x.n+' '+x.a+' '+x.d[0]+' '+x.d[1]).toLowerCase().includes(q));
+ $('#count').textContent=list.length;
+ $('#bizGrid').innerHTML=list.length?list.map(x=>`<button class="card" data-b="${x.id}"><div class="ph" style="--g:${GR[x.c]}">${IC[x.c]}${x.r?`<span class="rate">★ ${x.r}</span>`:''}</div><div class="cb"><small>${x.a}</small><h3>${x.n}</h3><p>${x.d[L==='en'?0:1]}</p></div></button>`).join(''):`<p>${t('none')}</p>`;
+ $('#infoGrid').innerHTML=INFO.map(i=>`<div class="card"><h3>${i[0]} ${i[1][L==='en'?0:1]}</h3><p>${i[2][L==='en'?0:1]}</p></div>`).join('');
+}
+function toast(m){const e=$('#toast');e.textContent=m;e.classList.add('on');clearTimeout(toast.h);toast.h=setTimeout(()=>e.classList.remove('on'),3500)}
+let cur=null;
+function open(o,form){cur=o;$('#mHead').textContent=o.ic;$('#mHead').style.background=o.g;$('#mTitle').textContent=o.n;$('#mLoc').textContent=o.a;$('#mText').textContent=o.d;
+ $('#mMeta').textContent=o.m||'';$('#bookForm').hidden=!form;$('#modal').showModal()}
+const pick=i=>{const x=D[i];open({n:x.n,a:x.a,d:x.d[L==='en'?0:1],ic:IC[x.c],g:GR[x.c],m:`${t('src')}: ${x.s}${x.r?` · ★ ${x.r} ${t('rating')}`:''}`},1)};
+document.addEventListener('click',e=>{
+ const b=e.target.closest('[data-b]'),d=e.target.closest('[data-d]'),c=e.target.closest('[data-c]'),n=e.target.closest('[data-cat]'),p=e.target.closest('[data-pg]');
+ if(b)pick(+b.dataset.b);
+ if(d){const x=DEST[+d.dataset.d];open({n:x[1],a:x[2],d:x[3][L==='en'?0:1],ic:x[4],g:GR.hotel},1)}
+ if(c){cat=c.dataset.c;render()}
+ if(n){cat=n.dataset.cat;render();$('#menu').classList.remove('open')}
+ if(p){e.preventDefault();open({n:t(p.dataset.pg),a:'',d:t(p.dataset.pg==='privacy'?'pPriv':'pTerms'),ic:'⚓',g:GR.hotel},0)}
+});
+$('#fContact').href=`https://wa.me/${WA}`;$('#fContact').target='_blank';$('#fContact').rel='noopener';
+$('#burger').onclick=()=>{const o=$('#menu').classList.toggle('open');$('#burger').setAttribute('aria-expanded',o)};
+$$('#menu a').forEach(a=>a.addEventListener('click',()=>$('#menu').classList.remove('open')));
+$('#lang').onclick=()=>{L=L==='en'?'id':'en';render()};
+$('#login').onclick=()=>toast(t('soon'));
+$('#mClose').onclick=()=>$('#modal').close();
+$('#searchForm').onsubmit=e=>{e.preventDefault();q=$('#q').value.trim().toLowerCase();cat=$('#cat').value;render();$('#businesses').scrollIntoView()};
+$('#fDate').min=new Date(Date.now()-new Date().getTimezoneOffset()*6e4).toISOString().slice(0,10);
+$('#bookForm').onsubmit=e=>{e.preventDefault();
+ if($('#fDate').value<$('#fDate').min){toast(t('pastDate'));return}
+ const m=`${t('hi')} ${cur.n} (${cur.a})\n${$('#fName').value.trim()}\n${t('date')}: ${$('#fDate').value}\n${t('ppl')}: ${$('#fPeople').value}\n${t('nts')}: ${$('#fNotes').value.trim()||'-'}`;
+ window.open(`https://wa.me/${WA}?text=${encodeURIComponent(m)}`,'_blank','noopener');$('#modal').close();e.target.reset()};
+render();
+</script>
 </body>
 </html>
