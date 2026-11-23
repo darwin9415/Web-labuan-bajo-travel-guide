@@ -34,8 +34,8 @@ const CATEGORIES = [
  {id:"guide",icon:"🎒",name:T("Tour Guides","Pemandu Wisata")}
 ];
 const DESTINATIONS = [
- {id:"padar",remote:COMMONS("Pulau_Padar_1.jpg"),credit:"Wikimedia Commons (cek lisensi di halaman file)",icon:"⛰️",c:["#0b3d5c","#16a5b0"],name:"Pulau Padar",loc:T("Komodo National Park","Taman Nasional Komodo"),desc:T("Famous three-bay viewpoint reached by a short hillside trek.","Titik pandang tiga teluk yang terkenal, dicapai dengan trekking singkat.")},
- {id:"komodo",remote:COMMONS("Komodo_island_(17119309071).jpg"),credit:"Wikimedia Commons (cek lisensi di halaman file)",icon:"🦎",c:["#17445f","#7fb89a"],name:"Pulau Komodo",loc:T("Komodo National Park","Taman Nasional Komodo"),desc:T("Home of the Komodo dragon. Visit with a licensed ranger.","Rumah komodo. Kunjungi bersama ranger resmi.")},
+ {id:"padar",icon:"⛰️",c:["#0b3d5c","#16a5b0"],name:"Pulau Padar",loc:T("Komodo National Park","Taman Nasional Komodo"),desc:T("Famous three-bay viewpoint reached by a short hillside trek.","Titik pandang tiga teluk yang terkenal, dicapai dengan trekking singkat.")},
+ {id:"komodo",icon:"🦎",c:["#17445f","#7fb89a"],name:"Pulau Komodo",loc:T("Komodo National Park","Taman Nasional Komodo"),desc:T("Home of the Komodo dragon. Visit with a licensed ranger.","Rumah komodo. Kunjungi bersama ranger resmi.")},
  {id:"pink",icon:"🏖️",c:["#c2557a","#f1b6c6"],name:"Pink Beach",loc:T("Komodo National Park","Taman Nasional Komodo"),desc:T("Pink-tinted sand and clear water for snorkeling.","Pasir berwarna merah muda dan air jernih untuk snorkeling.")},
  {id:"kelor",icon:"🏝️",c:["#0e7c86","#8fe0d4"],name:"Pulau Kelor",loc:T("Near Labuan Bajo","Dekat Labuan Bajo"),desc:T("Small island with a quick hike and sunrise views.","Pulau kecil dengan pendakian singkat dan pemandangan matahari terbit.")},
  {id:"batu",icon:"🕳️",c:["#4a3f35","#c9a66b"],name:"Goa Batu Cermin",loc:T("Labuan Bajo town","Kota Labuan Bajo"),desc:T("Limestone cave where light reflects off the walls.","Gua batu kapur tempat cahaya memantul di dinding.")},
