@@ -4,7 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bajo Travel Guide — Labuan Bajo, Flores</title>
-<meta name="description" content="Panduan premium Labuan Bajo: hotel dari budget hingga premium, paket trip Komodo, restoran, transportasi, dan diving.">
+<meta name="description" content="Rencanakan perjalanan ke Labuan Bajo. Temukan destinasi, pilihan menginap, trip Komodo, restoran, transportasi, dan aktivitas laut dalam satu panduan.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="color-scheme" content="light">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Bajo Travel Guide | Explore Labuan Bajo">
+<meta property="og:description" content="Panduan perjalanan Labuan Bajo, Flores. Destinasi, akomodasi, trip Komodo, dan informasi praktis.">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#071d2f">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E⚓%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -229,9 +235,137 @@ dialog[data-plain] form{display:none}
 .t-body .m-actions .btn{width:100%}
 .t-foot{font-size:12.5px;color:var(--mut);margin-top:14px}
 @media(max-width:640px){.t-cols,.t-list-2,.t-form{grid-template-columns:1fr}.t-body{padding:24px 22px 28px}.t-body h3{font-size:28px}.tmodal .mh{aspect-ratio:16/9}}
+
+/* Premium refinement layer */
+:root{
+ --navy:#071b2a;--ocean:#0c405d;--teal:#2b9da5;--gold:#c7a568;
+ --cream:#f7f4ed;--ink:#142a38;--mut:#62717b;--line:#e8e2d7;
+ --shadow-soft:0 18px 55px rgba(7,29,47,.09);
+ --shadow-card:0 22px 55px rgba(7,29,47,.12);
+}
+::selection{background:rgba(199,165,104,.3);color:var(--navy)}
+body{letter-spacing:-.012em}
+.wrap{width:min(100% - 48px,1280px)}
+section{scroll-margin-top:84px}
+.top{border-bottom:1px solid transparent}
+.top.solid{border-bottom-color:rgba(255,255,255,.09)}
+.logo{font-size:21px;letter-spacing:.015em}
+.logo span{white-space:nowrap}
+.menu a{position:relative;padding:8px 0}
+.menu a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1px;background:var(--gold);transition:right .25s}
+.menu a:hover::after{right:0}
+.hero{min-height:min(900px,100svh);background-position:center 46%;isolation:isolate}
+.hero::before{background:linear-gradient(90deg,rgba(4,19,31,.76) 0%,rgba(4,19,31,.42) 58%,rgba(4,19,31,.12) 100%),linear-gradient(0deg,rgba(4,19,31,.88),transparent 62%)}
+.hero-in{padding-top:170px;padding-bottom:8px}
+.hero h1{max-width:1000px;text-wrap:balance;text-shadow:0 8px 36px rgba(0,0,0,.18)}
+.hero p.lead{max-width:570px;line-height:1.75}
+.eyebrow{letter-spacing:.2em}
+.btn{min-height:48px;box-shadow:none}
+.btn-gold{box-shadow:0 10px 26px rgba(199,165,104,.18)}
+.btn:focus-visible,.tab:focus-visible,.lang:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+.stats{max-width:940px}
+.stat{padding-right:18px}
+.stat b{letter-spacing:-.03em}
+section:not(.hero){position:relative}
+.sec-head{margin-bottom:48px}
+.sec-head h2{text-wrap:balance;letter-spacing:-.035em}
+.sec-head p{line-height:1.8}
+.card{border-radius:18px;box-shadow:0 4px 18px rgba(7,29,47,.025)}
+.card:hover{box-shadow:var(--shadow-card);transform:translateY(-6px)}
+.card:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+.media{background-color:#dce6e5}
+.media img{will-change:transform}
+.body{padding:23px 24px 27px}
+.body h3{letter-spacing:-.02em}
+.trip{padding:28px}
+.trip-media{border-radius:12px}
+.trip .price strong{letter-spacing:-.03em}
+.itin{box-shadow:0 24px 70px rgba(7,29,47,.12)}
+.row{box-shadow:0 5px 18px rgba(7,29,47,.025)}
+.row:hover{box-shadow:var(--shadow-soft)}
+.stay-card-media{background:#e5eceb}
+.dir-bar{gap:18px}
+.search{box-shadow:0 6px 20px rgba(7,29,47,.035)}
+.search:focus-within{border-color:var(--gold);box-shadow:0 0 0 3px rgba(199,165,104,.13)}
+.tab{transition:background .2s,border-color .2s,color .2s,transform .2s}
+.tab:hover{transform:translateY(-1px)}
+.info{box-shadow:0 8px 28px rgba(7,29,47,.035);transition:transform .25s,box-shadow .25s}
+.info:hover{transform:translateY(-3px);box-shadow:var(--shadow-soft)}
+.cta{position:relative;overflow:hidden}
+.cta::before,.cta::after{content:"";position:absolute;border:1px solid rgba(199,165,104,.15);border-radius:50%;width:520px;height:520px;pointer-events:none}
+.cta::before{top:-350px;left:-180px}
+.cta::after{bottom:-390px;right:-170px}
+.cta .wrap{position:relative;z-index:1}
+footer{border-top:1px solid rgba(255,255,255,.08)}
+dialog{border:1px solid rgba(199,165,104,.24)}
+dialog[open]{animation:modal-in .22s ease-out}
+@keyframes modal-in{from{opacity:0;transform:translateY(12px) scale(.99)}to{opacity:1;transform:translateY(0) scale(1)}}
+.m-close:hover{background:var(--gold)}
+.toast{box-shadow:0 12px 35px rgba(0,0,0,.2)}
+/* Added utility controls */
+#reading-progress{position:fixed;z-index:80;top:0;left:0;width:0;height:3px;background:var(--gold);box-shadow:0 0 12px rgba(199,165,104,.5)}
+#back-to-top{position:fixed;z-index:35;right:22px;bottom:22px;width:48px;height:48px;border:1px solid rgba(255,255,255,.22);border-radius:50%;background:var(--navy);color:#fff;font-size:20px;cursor:pointer;opacity:0;visibility:hidden;transform:translateY(10px);transition:.25s;box-shadow:0 8px 25px rgba(7,29,47,.2)}
+#back-to-top.visible{opacity:1;visibility:visible;transform:translateY(0)}
+#back-to-top:hover{background:var(--gold);color:var(--navy)}
+.skip-link{position:fixed;z-index:100;top:10px;left:10px;padding:10px 16px;background:#fff;color:var(--navy);border-radius:8px;transform:translateY(-150%)}
+.skip-link:focus{transform:translateY(0)}
+@media(max-width:960px){
+ .hero::before{background:linear-gradient(180deg,rgba(4,19,31,.45),rgba(4,19,31,.8) 68%,rgba(4,19,31,.95))}
+ .hero-in{padding-top:145px}
+}
+@media(max-width:700px){
+ .wrap{width:min(100% - 36px,1280px);padding-left:0;padding-right:0}
+ section{padding:76px 0}
+ .hero{min-height:92svh}
+ .hero-in{padding-top:130px}
+ .hero h1{font-size:clamp(48px,13vw,76px);line-height:1.01}
+ .hero p.lead{font-size:16px;line-height:1.7}
+ .hero-cta{gap:10px;margin-bottom:42px}
+ .hero-cta .btn{flex:1 1 190px}
+ .stats{padding:22px 0 30px;gap:18px 10px}
+ .stat b{font-size:30px}
+ .stat span{font-size:12px}
+ .grid{grid-template-columns:1fr;gap:18px}
+ .dest-feature{grid-column:auto}
+ .dest-feature .media{min-height:0;aspect-ratio:4/3}
+ .body{padding:20px}
+ .trip{padding:22px}
+ .trip-media{margin:-22px -22px 22px;height:190px}
+ .itin{border-radius:20px;padding:32px 22px}
+ .search{min-width:0;width:100%}
+ .dir-bar{align-items:stretch}
+ .tabs{gap:8px}
+ .tab{padding:9px 14px;font-size:13px}
+ .foot-grid{gap:28px}
+ #back-to-top{right:14px;bottom:14px;width:44px;height:44px}
+}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+
+
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:44px}
+.step{border:1px solid var(--line);border-radius:16px;padding:20px 22px;background:#fff}
+.step span{display:block;font-family:var(--serif);color:var(--gold-d);font-size:24px;font-style:italic;margin-bottom:4px}
+.step b{color:var(--navy);font-size:15px;font-weight:600}
+.tierbadge{position:absolute;top:14px;left:14px;z-index:2;font:700 11px var(--sans);letter-spacing:.12em;text-transform:uppercase;padding:6px 12px;border-radius:999px;background:var(--navy);color:var(--gold)}
+.tb-mid{background:#0b6e7a;color:#fff}
+.tb-premium{background:var(--gold);color:var(--navy)}
+.hcard .body{flex:1}
+.hfoot{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:auto;padding-top:14px;border-top:1px solid var(--line);font-size:13px;color:var(--mut)}
+.hfoot strong{font-family:var(--serif);font-size:17px;color:var(--navy);font-weight:600;text-align:right}
+.hdesc{font-size:16px;color:#2e4253;margin:4px 0 14px;line-height:1.65}
+.btn-soft{background:var(--cream);color:var(--navy);border:1px solid var(--line)}
+.btn-soft:hover{border-color:var(--navy)}
+.t-err{color:#a4372b;font-size:13px;margin-top:10px;min-height:0}
+.t-err:empty{display:none}
+@media(max-width:720px){.hfoot{flex-wrap:wrap}}
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<div id="reading-progress" aria-hidden="true"></div>
 
 <header class="top" id="top-bar">
  <div class="wrap top-in">
@@ -251,7 +385,7 @@ dialog[data-plain] form{display:none}
  </div>
 </header>
 
-<main>
+<main id="main-content">
 <!-- HERO -->
 <section class="hero" id="home" style="padding:0">
  <div class="wrap hero-in">
@@ -303,28 +437,16 @@ dialog[data-plain] form{display:none}
    <div><div class="eyebrow" data-i="sEy"></div><h2 data-i="sH"></h2></div>
    <p data-i="sP"></p>
   </div>
-  <div class="stay-split">
-   <div>
-    <div class="eyebrow" data-i="budEy"></div>
-    <h3 data-i="budH"></h3>
-    <p data-i="budP"></p>
-    <div class="rows" id="budgetList"></div>
-    <div class="callout" data-i="budHostel"></div>
-   </div>
-   <div>
-    <div class="eyebrow" data-i="midEy"></div>
-    <h3 data-i="midH"></h3>
-    <p data-i="midP"></p>
-    <div class="rows" id="midList"></div>
-    <div class="callout" data-i="midTip"></div>
-   </div>
+  <div class="steps" id="stepsBar"></div>
+  <div class="dir-bar">
+   <div class="tabs" id="stayTabs"></div>
+   <div class="count"><span id="stayCountLbl"></span> <b id="stayCount"></b></div>
   </div>
-  <div class="eyebrow" data-i="pickEy" style="margin-bottom:24px"></div>
-  <div class="grid" id="hotelGrid"></div>
+  <div class="grid" id="stayGrid"></div>
+  <div class="callout" id="stayTip"></div>
  </div>
 </section>
 
-<!-- DIRECTORY -->
 <section id="directory" class="alt">
  <div class="wrap">
   <div class="sec-head">
@@ -392,6 +514,32 @@ dialog[data-plain] form{display:none}
  </div>
 </dialog>
 
+<dialog id="hotelModal" class="tmodal">
+ <button class="m-close" data-hclose aria-label="Close">✕</button>
+ <div class="media mh" id="hHead"></div>
+ <div class="t-body">
+  <div class="loc" id="hTag"></div>
+  <h3 id="hTitle"></h3>
+  <div class="t-price"><strong id="hPrice"></strong> <small id="hRate"></small></div>
+  <h4 class="t-h" id="hSecAbout"></h4>
+  <p class="hdesc" id="hDesc"></p>
+  <p class="t-foot" id="hSrc"></p>
+  <div class="m-actions"><a class="btn btn-soft btn-sm" id="hMaps" target="_blank" rel="noopener" href="#"></a></div>
+  <h4 class="t-h" id="hSecForm"></h4>
+  <form class="t-form" id="hForm" onsubmit="return false">
+   <label><span id="hLCi"></span><input id="hCi" name="ci" type="date"></label>
+   <label><span id="hLCo"></span><input id="hCo" name="co" type="date"></label>
+   <label><span id="hLRooms"></span><input id="hRooms" name="rooms" type="number" min="1" max="20" value="1"></label>
+   <label><span id="hLGuests"></span><input id="hGuests" name="guests" type="number" min="1" max="60" value="2"></label>
+   <label class="full"><span id="hLName"></span><input id="hName" name="name" type="text" maxlength="80"></label>
+   <label class="full"><span id="hLNotes"></span><textarea id="hNotes" name="notes" rows="3" maxlength="400"></textarea></label>
+  </form>
+  <p class="t-err" id="hErr"></p>
+  <div class="m-actions"><a class="btn btn-gold" id="hWa" target="_blank" rel="noopener" href="#"></a></div>
+  <p class="t-foot" id="hFoot"></p>
+ </div>
+</dialog>
+
 <dialog id="tripModal" class="tmodal">
  <button class="m-close" data-tclose aria-label="Close">✕</button>
  <div class="media mh" id="tHead"></div>
@@ -420,7 +568,8 @@ dialog[data-plain] form{display:none}
  </div>
 </dialog>
 
-<div class="toast" id="toast" role="status"></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<button id="back-to-top" type="button" aria-label="Kembali ke atas" title="Kembali ke atas">↑</button>
 
 <script>
 const WA='6285337591753';
@@ -626,14 +775,7 @@ function renderTrips(){
 const BUDGET_IMAGES=['sylvia-resort-komodo','seaesta-komodo-hotel-hostel','hotel-wisata','andira-homestay','east-marina-guesthouse','waecicu-eden-beach-hotel','dejavu-2-0-hotel'];
 const MID_IMAGES=['eco-tree-otel','bintang-flores-hotel'];
 function stayMedia(key,name){return `<div class="stay-card-media"><img src="${HOTEL_PHOTOS[key]}" alt="${esc(name)}" decoding="async"></div>`}
-function renderStay(){
- $('#budgetList').innerHTML=BUDGET.map((b,i)=>`<div class="row">${stayMedia(BUDGET_IMAGES[i],b.n)}<div class="row-wrap"><span class="monogram">${esc(b.n[0])}</span><div><small>${esc(b.z[L])}</small><b>${esc(b.n)}</b><p>${esc(b.d[L])}</p></div></div>
-  <div class="r">${b.r?`<span class="pill light">★ ${esc(b.r)}</span>`:''}<strong>${b.p?b.p[L]:t('askPrice')}</strong></div></div>`).join('');
- $('#midList').innerHTML=MID.map((b,i)=>`<div class="row">${stayMedia(MID_IMAGES[i],b.n)}<div class="row-wrap"><span class="monogram">${esc(b.n[0])}</span><div><small>${esc(b.z[L])}</small><b>${esc(b.n)}</b><p>${esc(b.d[L])}</p></div></div>
-  <div class="r">${b.r?`<span class="pill light">★ ${esc(b.r)}</span>`:''}<strong>${b.p?b.p[L]:t('askPrice')}</strong></div></div>`).join('');
- $('#hotelGrid').innerHTML=D.filter(x=>x.c==='hotel').map(bizCard).join('');
-}
-
+/*renderStay replaced*/
 function renderDir(){
  $('#dirTabs').innerHTML=['resto','car','dive'].map(c=>`<button class="tab" data-c="${c}" aria-pressed="${c===cat}">${IC[c]} ${UI[L].cats[c]}</button>`).join('');
  const list=D.filter(x=>x.c===cat&&(x.n+' '+x.a+' '+ei(x.d)).toLowerCase().includes(q));
@@ -782,7 +924,228 @@ document.addEventListener('click',e=>{
  if(e.target.id==='tripModal'){$('#tripModal').close()}
 });
 
+
+/* ===== Hotels: full list, tiers, detail + booking request ===== */
+const LEAD_URL='';   /* isi dengan URL Google Form / Formspree jika ingin menyimpan setiap permintaan */
+const STUI={
+ en:{all:'All hotels',shown:'Hotels shown',tiers:{budget:'Budget',mid:'Mid-range',premium:'Resort & premium'},
+  steps:['Choose a hotel','Pick dates and guests','Confirm on WhatsApp'],
+  view:'View details & request',secForm:'Send a booking request',secAbout:'About this hotel',
+  ci:'Check-in',co:'Check-out',rooms:'Rooms',guests:'Guests',lName:'Your name',lNotes:'Notes (room type, pickup, special needs)',
+  send:'Request via WhatsApp',maps:'Open in Google Maps',ask:'Check price & availability',askShort:'Check price',noRate:'No rating yet',src:'Source',nights:'nights',
+  badDates:'Check-out must be after check-in.',
+  foot:'Your request goes to WhatsApp. The hotel confirms the final price and availability.',
+  tip:'According to the sources we collected, hotel prices in Labuan Bajo are usually lowest in January. Book early for busy dates.'},
+ id:{all:'Semua hotel',shown:'Hotel ditampilkan',tiers:{budget:'Hemat',mid:'Menengah',premium:'Resort & premium'},
+  steps:['Pilih hotel','Isi tanggal dan tamu','Konfirmasi di WhatsApp'],
+  view:'Lihat detail & pesan',secForm:'Kirim permintaan pesanan',secAbout:'Tentang hotel ini',
+  ci:'Check-in',co:'Check-out',rooms:'Jumlah kamar',guests:'Jumlah tamu',lName:'Nama Anda',lNotes:'Catatan (tipe kamar, jemputan, kebutuhan khusus)',
+  send:'Kirim permintaan via WhatsApp',maps:'Buka di Google Maps',ask:'Cek harga & ketersediaan',askShort:'Cek harga',noRate:'Belum ada skor',src:'Sumber',nights:'malam',
+  badDates:'Tanggal check-out harus setelah check-in.',
+  foot:'Permintaan Anda dikirim lewat WhatsApp. Harga dan ketersediaan final dikonfirmasi oleh hotel.',
+  tip:'Menurut sumber yang kami rangkum, harga hotel di Labuan Bajo umumnya paling murah di Januari. Pesan lebih awal untuk tanggal ramai.'}
+};
+const lt=o=>(o&&typeof o==='object'&&!Array.isArray(o))?o[L]:(Array.isArray(o)?o[L==='en'?0:1]:o);
+const HOTELS=[
+ ...BUDGET.map((b,i)=>({n:b.n,tier:'budget',area:b.z,rate:b.r||'',price:b.p||null,desc:b.d,src:'',photo:HOTEL_PHOTOS[BUDGET_IMAGES[i]]})),
+ ...MID.map((b,i)=>({n:b.n,tier:'mid',area:b.z,rate:b.r||'',price:b.p||null,desc:b.d,src:'',photo:HOTEL_PHOTOS[MID_IMAGES[i]]})),
+ ...D.filter(x=>x.c==='hotel').map(x=>({n:x.n,tier:'premium',area:x.a,rate:x.r?`${x.r}/10 · ${x.s}`:'',price:null,desc:x.d,src:x.s,photo:IMG['hotel/'+slug(x.n)]}))
+];
+let tier='all', hcur=-1;
+function renderStay(){
+ const S=STUI[L];
+ $('#stepsBar').innerHTML=S.steps.map((s,k)=>`<div class="step"><span>0${k+1}</span><b>${esc(s)}</b></div>`).join('');
+ $('#stayTabs').innerHTML=['all','budget','mid','premium'].map(k=>`<button class="tab" data-tier="${k}" aria-pressed="${k===tier}">${k==='all'?S.all:S.tiers[k]}</button>`).join('');
+ const list=HOTELS.map((h,i)=>[h,i]).filter(([h])=>tier==='all'||h.tier===tier);
+ $('#stayCountLbl').textContent=S.shown+':';
+ $('#stayCount').textContent=list.length;
+ $('#stayGrid').innerHTML=list.map(([h,i])=>`<article class="card hcard" data-h="${i}" role="button" tabindex="0">
+  <span class="tierbadge tb-${h.tier}">${S.tiers[h.tier]}</span>
+  <div class="media">${h.photo?`<img src="${h.photo}" alt="${esc(h.n)}" decoding="async">`:'<span class="ico">🏨</span>'}</div>
+  <div class="body"><small>${esc(lt(h.area))}</small><h3>${esc(h.n)}</h3><p>${esc(lt(h.desc))}</p>
+   <div class="hfoot"><span>${h.rate?esc(h.rate):S.noRate}</span><strong>${h.price?esc(lt(h.price)):S.askShort}</strong></div></div></article>`).join('');
+ $('#stayTip').textContent=S.tip;
+}
+const nightsOf=(a,b)=>{if(!a||!b)return 0;const d=(new Date(b)-new Date(a))/86400000;return d>0?d:0};
+function hotelMsg(){
+ const h=HOTELS[hcur], v=id=>document.getElementById(id).value.trim()||'-';
+ const ci=document.getElementById('hCi').value, co=document.getElementById('hCo').value;
+ const n=nightsOf(ci,co), stay=n?` (${n} ${STUI[L].nights})`:'';
+ return L==='en'
+  ? `Hi, I'd like to request a room at ${h.n}.\nCheck-in: ${v('hCi')}\nCheck-out: ${v('hCo')}${stay}\nRooms: ${v('hRooms')}\nGuests: ${v('hGuests')}\nName: ${v('hName')}\nNotes: ${v('hNotes')}`
+  : `Halo, saya mau pesan kamar di ${h.n}.\nCheck-in: ${v('hCi')}\nCheck-out: ${v('hCo')}${stay}\nJumlah kamar: ${v('hRooms')}\nJumlah tamu: ${v('hGuests')}\nNama: ${v('hName')}\nCatatan: ${v('hNotes')}`;
+}
+function updateHotelWa(){
+ const ci=$('#hCi').value, co=$('#hCo').value;
+ const bad=ci&&co&&nightsOf(ci,co)===0;
+ $('#hErr').textContent=bad?STUI[L].badDates:'';
+ $('#hWa').href=bad?'#':wa(hotelMsg());
+ $('#hWa').style.opacity=bad?.5:1;
+}
+function sendLead(data){
+ if(!LEAD_URL)return;
+ try{fetch(LEAD_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(data).toString()})}catch(e){}
+}
+const todayStr=()=>new Date().toLocaleDateString('en-CA',{timeZone:'Asia/Makassar'});
+function openHotel(i){
+ const h=HOTELS[i], S=STUI[L]; hcur=i;
+ $('#hHead').innerHTML=h.photo?`<img src="${h.photo}" alt="${esc(h.n)}" decoding="async">`:'<span class="ico">🏨</span>';
+ $('#hTag').textContent=S.tiers[h.tier]+' · '+lt(h.area);
+ $('#hTitle').textContent=h.n;
+ $('#hPrice').textContent=h.price?lt(h.price):S.ask;
+ $('#hRate').textContent=h.rate||S.noRate;
+ $('#hSecAbout').textContent=S.secAbout;
+ $('#hDesc').textContent=lt(h.desc);
+ $('#hSrc').textContent=h.src?`${S.src}: ${h.src}`:'';
+ $('#hMaps').href='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(h.n+' Labuan Bajo');
+ $('#hMaps').textContent=S.maps;
+ $('#hSecForm').textContent=S.secForm;
+ $('#hLCi').textContent=S.ci; $('#hLCo').textContent=S.co; $('#hLRooms').textContent=S.rooms; $('#hLGuests').textContent=S.guests;
+ $('#hLName').textContent=S.lName; $('#hLNotes').textContent=S.lNotes;
+ $('#hWa').textContent=S.send;
+ $('#hFoot').textContent=S.foot;
+ $('#hCi').min=todayStr(); $('#hCo').min=$('#hCi').value||todayStr();
+ updateHotelWa();
+ $('#hotelModal').showModal();
+}
+$('#hotelModal').addEventListener('input',updateHotelWa);
+$('#hCi').addEventListener('change',()=>{$('#hCo').min=$('#hCi').value||todayStr();updateHotelWa()});
+$('#hWa').addEventListener('click',()=>{
+ const h=HOTELS[hcur];
+ sendLead({type:'hotel',hotel:h.n,checkin:$('#hCi').value,checkout:$('#hCo').value,rooms:$('#hRooms').value,guests:$('#hGuests').value,name:$('#hName').value,notes:$('#hNotes').value,lang:L});
+});
+$('#tWa').addEventListener('click',()=>{
+ sendLead({type:'trip',trip:TRIPS[+$('#tripModal').dataset.i].n.en,date:$('#tDate').value,people:$('#tPeople').value,name:$('#tName').value,notes:$('#tNotes').value,lang:L});
+});
+document.addEventListener('click',e=>{
+ const tb=e.target.closest('[data-tier]');
+ if(tb){tier=tb.dataset.tier;renderStay();return}
+ const hc=e.target.closest('[data-h]');
+ if(hc){openHotel(+hc.dataset.h);return}
+ if(e.target.closest('[data-hclose]')){$('#hotelModal').close();return}
+ if(e.target.id==='hotelModal'){$('#hotelModal').close()}
+});
+document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.matches&&e.target.matches('[data-h]'))openHotel(+e.target.dataset.h)});
+
 renderAll();
+
+/* Progressive enhancement: reading progress, back-to-top, date minimum and image fallback. */
+(function(){
+ const progress=document.getElementById('reading-progress');
+ const topButton=document.getElementById('back-to-top');
+ const dateInput=document.getElementById('tDate');
+ if(dateInput){
+  const today=new Date();
+  const localDate=new Date(today.getTime()-today.getTimezoneOffset()*60000).toISOString().slice(0,10);
+  dateInput.min=localDate;
+ }
+ function updateScrollUI(){
+  const max=document.documentElement.scrollHeight-window.innerHeight;
+  const pct=max>0?(window.scrollY/max)*100:0;
+  if(progress) progress.style.width=pct+'%';
+  if(topButton) topButton.classList.toggle('visible',window.scrollY>550);
+ }
+ window.addEventListener('scroll',updateScrollUI,{passive:true});
+ window.addEventListener('resize',updateScrollUI);
+ updateScrollUI();
+ if(topButton) topButton.addEventListener('click',()=>window.scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'}));
+ document.addEventListener('error',function(e){
+  const img=e.target;
+  if(img&&img.tagName==='IMG'){
+   img.classList.add('image-unavailable');
+   img.alt=img.alt||'Image unavailable';
+  }
+ },true);
+})();
+
 </script>
+<style>
+#bc-btn{position:fixed;left:22px;bottom:22px;z-index:70;width:58px;height:58px;border-radius:50%;border:0;background:var(--navy,#071d2f);color:#c9a45c;box-shadow:0 14px 30px -10px rgba(0,0,0,.45);cursor:pointer;font-size:24px;display:grid;place-items:center;transition:transform .2s}
+#bc-btn:hover{transform:translateY(-2px)}
+#bc-panel{position:fixed;left:22px;bottom:94px;z-index:70;width:min(380px,calc(100vw - 44px));height:min(540px,calc(100vh - 140px));background:#fff;border-radius:20px;box-shadow:0 30px 60px -20px rgba(7,29,47,.45);display:none;flex-direction:column;overflow:hidden;border:1px solid #e6dfd0}
+#bc-panel.open{display:flex}
+#bc-head{background:var(--navy,#071d2f);color:#fff;padding:16px 18px;display:flex;justify-content:space-between;align-items:center}
+#bc-head b{font-family:var(--serif,Georgia,serif);font-size:17px;font-weight:600}
+#bc-head small{display:block;color:rgba(255,255,255,.65);font-size:12px}
+#bc-x{background:none;border:0;color:#fff;font-size:20px;cursor:pointer}
+#bc-log{flex:1;overflow-y:auto;padding:16px;display:grid;gap:10px;align-content:start;background:#faf7f1}
+.bc-m{max-width:86%;padding:10px 13px;border-radius:14px;font-size:14px;line-height:1.5;white-space:pre-wrap;word-wrap:break-word}
+.bc-u{justify-self:end;background:var(--navy,#071d2f);color:#fff;border-bottom-right-radius:4px}
+.bc-a{justify-self:start;background:#fff;border:1px solid #e6dfd0;color:#1d2f3d;border-bottom-left-radius:4px}
+.bc-typing{color:#5b6b78;font-size:13px;font-style:italic}
+#bc-chips{display:flex;flex-wrap:wrap;gap:8px;padding:0 16px 10px;background:#faf7f1}
+.bc-chip{border:1px solid #e6dfd0;background:#fff;border-radius:999px;padding:6px 12px;font-size:12.5px;color:#0f2230;cursor:pointer}
+.bc-chip:hover{border-color:#c9a45c}
+#bc-form{display:flex;gap:8px;padding:12px;border-top:1px solid #e6dfd0;background:#fff}
+#bc-in{flex:1;border:1px solid #e6dfd0;border-radius:999px;padding:10px 14px;font:inherit;font-size:14px;outline:none}
+#bc-in:focus{border-color:#c9a45c}
+#bc-send{background:#c9a45c;color:#071d2f;border:0;border-radius:999px;padding:10px 16px;font-weight:700;font-size:13px;font-family:inherit;cursor:pointer}
+#bc-send:disabled{opacity:.5;cursor:default}
+@media(max-width:480px){#bc-panel{left:12px;right:12px;width:auto;bottom:88px}#bc-btn{left:14px;bottom:14px}}
+</style>
+<button id="bc-btn" type="button" aria-label="Chat dengan asisten" aria-expanded="false">💬</button>
+<div id="bc-panel" role="dialog" aria-label="Asisten Bajo Guide">
+ <div id="bc-head">
+  <div><b>Bajo Guide Assistant</b><small id="bc-sub">Tanya trip, hotel, atau tanggal</small></div>
+  <button id="bc-x" type="button" aria-label="Tutup">✕</button>
+ </div>
+ <div id="bc-log"></div>
+ <div id="bc-chips"></div>
+ <form id="bc-form"><input id="bc-in" type="text" maxlength="1000" autocomplete="off" placeholder="Tulis pertanyaan…"><button id="bc-send" type="submit">Kirim</button></form>
+</div>
+<script>
+/* Chat widget: talks only to your Worker, never to the AI provider directly. */
+(function(){
+ const WORKER_URL='https://bajo-guide-chat.YOUR-SUBDOMAIN.workers.dev'; /* ganti dengan URL Worker Anda */
+ const WA_NUM='6285337591753';
+ const T={
+  id:{sub:'Tanya trip, hotel, atau tanggal',ph:'Tulis pertanyaan…',send:'Kirim',off:'Asisten belum aktif. Silakan chat kami di WhatsApp.',
+      err:'Maaf, asisten sedang tidak tersedia. Silakan hubungi kami lewat WhatsApp.',hello:'Halo! Saya asisten Bajo Guide. Tanya soal paket trip, hotel, atau kuota taman.',
+      chips:['Paket trip termurah?','Hotel hemat di Labuan Bajo?','Berapa hari perlu disiapkan?','Kuota Taman Nasional Komodo?'],wa:'Chat WhatsApp'},
+  en:{sub:'Ask about trips, hotels, or dates',ph:'Type your question…',send:'Send',off:'The assistant is not active yet. Please chat with us on WhatsApp.',
+      err:'Sorry, the assistant is unavailable right now. Please contact us on WhatsApp.',hello:'Hello! I am the Bajo Guide assistant. Ask about boat trips, hotels, or park quotas.',
+      chips:['Cheapest boat trip?','Budget hotels in Labuan Bajo?','How many days should I plan?','Komodo park quota?'],wa:'Chat WhatsApp'}
+ };
+ const lang=()=>(typeof L!=='undefined'&&L==='en')?'en':'id';
+ const hist=[];
+ const $=id=>document.getElementById(id);
+ function add(role,text){
+  const d=document.createElement('div'); d.className='bc-m '+(role==='user'?'bc-u':'bc-a'); d.textContent=text;
+  $('bc-log').appendChild(d); $('bc-log').scrollTop=1e9; return d;
+ }
+ function applyLang(){
+  const t=T[lang()];
+  $('bc-sub').textContent=t.sub; $('bc-in').placeholder=t.ph; $('bc-send').textContent=t.send;
+  $('bc-chips').innerHTML=''; t.chips.forEach(c=>{const b=document.createElement('button');b.type='button';b.className='bc-chip';b.textContent=c;b.onclick=()=>ask(c);$('bc-chips').appendChild(b)});
+ }
+ function open(){ $('bc-panel').classList.add('open'); $('bc-btn').setAttribute('aria-expanded','true'); $('bc-in').focus(); if(!$('bc-log').children.length){ add('assistant',T[lang()].hello); } }
+ function close(){ $('bc-panel').classList.remove('open'); $('bc-btn').setAttribute('aria-expanded','false'); }
+ async function ask(text){
+  text=(text||'').trim(); if(!text) return;
+  const t=T[lang()];
+  if(WORKER_URL.includes('YOUR-SUBDOMAIN')){ add('assistant',t.off); return; }
+  add('user',text); hist.push({role:'user',content:text});
+  $('bc-in').value=''; $('bc-send').disabled=true;
+  const typing=add('assistant','…'); typing.classList.add('bc-typing');
+  try{
+   const r=await fetch(WORKER_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:hist.slice(-10)})});
+   const data=await r.json().catch(()=>({}));
+   if(!r.ok||!data.reply) throw new Error('bad');
+   typing.classList.remove('bc-typing'); typing.textContent=data.reply;
+   hist.push({role:'assistant',content:data.reply});
+  }catch(e){
+   typing.classList.remove('bc-typing'); typing.textContent=t.err; hist.pop();
+  }finally{ $('bc-send').disabled=false; $('bc-in').focus(); }
+ }
+ $('bc-btn').addEventListener('click',()=>$('bc-panel').classList.contains('open')?close():open());
+ $('bc-x').addEventListener('click',close);
+ $('bc-form').addEventListener('submit',e=>{e.preventDefault();ask($('bc-in').value)});
+ document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});
+ applyLang();
+ const langBtn=document.getElementById('lang');
+ if(langBtn) langBtn.addEventListener('click',()=>setTimeout(()=>{applyLang();},0));
+})();
+</script>
+
 </body>
 </html>
